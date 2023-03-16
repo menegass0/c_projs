@@ -3,8 +3,7 @@
 int main(){
     int i;
     int ans1, ans2, ans3, ans4, ans5;
-    int point1, point2, point3, point4, point5;
-    int point01, point02, point03, point04, point05;  
+    int point1, point2, point3, point4, point5; 
 
     printf("Welcome to the Game \n\n");
 
@@ -31,8 +30,8 @@ int main(){
         }
         else {
             printf("Wrong answer\n");
-            point01 = 0;
-            printf("You have scored %d point\n\n", point01);
+            point1 = 0;
+            printf("You have scored %d point\n\n", point1);
         }
 
         printf("2) Which one is the first web browser inveted in 1990?\n\n");
@@ -51,8 +50,8 @@ int main(){
         }
         else{
             printf("Wrong answer\n");
-            point02 = 0;
-            printf("You have scored %d points\n\n", point02);
+            point2 = 0;
+            printf("You have scored %d points\n\n", point2);
         }
 
         printf("3) First computer virus is know as?\n\n");
@@ -71,8 +70,8 @@ int main(){
         }
         else{
             printf("Wrong answer\n");
-            point03 = 0;
-            printf("You have scored %d points\n\n", point03);
+            point3 = 0;
+            printf("You have scored %d points\n\n", point3);
         }
 
         printf("4) Firewakk in computer is used for?\n\n");
@@ -91,8 +90,8 @@ int main(){
         }
         else{
             printf("Wrong answer\n");
-            point04 = 0;
-            printf("You have scored %d points\n\n", point04);
+            point4 = 0;
+            printf("You have scored %d points\n\n", point4);
         }
 
         printf("5) Which of the following is not a database management software?\n\n");
@@ -111,8 +110,8 @@ int main(){
         }
         else{
             printf("Wrong answer\n");
-            point05 = 0;
-            printf("You have scored %d points\n\n", point05);
+            point5 = 0;
+            printf("You have scored %d points\n\n", point5);
         }
 
         printf("the total of points is: %d", (point1+point2+point3+point4+point5));
