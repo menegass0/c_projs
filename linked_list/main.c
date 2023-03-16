@@ -10,6 +10,7 @@ node * createLinkedList(int n);
 
 void displayList(node * head);
 
+
 int main(){
     int n = 0;
     node * HEAD = NULL;
