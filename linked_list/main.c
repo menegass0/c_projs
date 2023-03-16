@@ -19,6 +19,14 @@ int main(){
     HEAD = createLinkedList(n);
     displayList(HEAD);
 
+    node * new = (node*)malloc(sizeof(node));
+    new->next = HEAD;
+    new->data = 5;
+    HEAD = new;
+
+    printf("\n");
+    displayList(HEAD);
+
 
     return 0;
 }
@@ -53,9 +61,8 @@ node * createLinkedList(int n){
 void displayList(node * head){
     node * p = head;
     
-    while(p->next != NULL){
+    while(p != NULL){
         printf("\t%d->", p->data);
         p = p->next;
     }
-    printf("\t%d", p->data);
 }
