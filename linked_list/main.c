@@ -10,23 +10,30 @@ node * createLinkedList(int n);
 
 void displayList(node * head);
 
+node * addNode(node * head);
 
 int main(){
     int n = 0;
+    int op =0;
     node * HEAD = NULL;
     printf("\nHow many nodes");
     scanf("%d", &n);
     HEAD = createLinkedList(n);
     displayList(HEAD);
 
-    node * new = (node*)malloc(sizeof(node));
-    new->next = HEAD;
-    new->data = 5;
-    HEAD = new;
+    printf("\nAdd one more node? \t1 for yes\t2 for no\n");
+    scanf("%d", &op);
 
-    printf("\n");
-    displayList(HEAD);
+    while (op == 1)
+    {
+        HEAD = addNode(HEAD);
 
+        printf("\n");
+        displayList(HEAD);
+
+        printf("\nAdd one more node? \t1 for yes\t2 for no\n");
+        scanf("%d", &op);
+    }   
 
     return 0;
 }
@@ -65,4 +72,16 @@ void displayList(node * head){
         printf("\t%d->", p->data);
         p = p->next;
     }
+}
+
+node * addNode(node * head){
+    node * new = (node*)malloc(sizeof(node));
+    new->next = head;
+
+    printf("\n\nEnter the new node value:");
+    scanf("%d", &new->data);
+
+    head = new;
+
+    return head;
 }
