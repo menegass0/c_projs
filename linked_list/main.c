@@ -8,12 +8,15 @@ typedef struct node{
 
 node * createLinkedList(int n);
 
+void displayList(node * head);
+
 int main(){
     int n = 0;
     node * HEAD = NULL;
     printf("\nHow many nodes");
     scanf("%d", &n);
     HEAD = createLinkedList(n);
+    displayList(HEAD);
 
 
     return 0;
@@ -37,11 +40,21 @@ node * createLinkedList(int n){
             head = temp;
         }
         else{
-            n = head;
+            p = head;
             while (p->next != NULL)
                 p = p->next;
             p->next = temp;
         }
     }   
     return head;
+}
+
+void displayList(node * head){
+    node * p = head;
+    
+    while(p->next != NULL){
+        printf("\t%d->", p->data);
+        p = p->next;
+    }
+    printf("\t%d", p->data);
 }
